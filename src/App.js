@@ -36,6 +36,7 @@ function App() {
   useEffect(() => {
     if (window.location.hash) {
       const object = getReturnedParams(window.location.hash);
+      console.log(object);
       setToken(object.access_token);
       setBearer(object.token_type);
       setExpiration(object.expires_in);
